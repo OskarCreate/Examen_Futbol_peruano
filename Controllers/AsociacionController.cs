@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Examen_Futbol_peruano.Data;
 using Examen_Futbol_peruano.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Examen_Futbol_peruano.Controllers
 {
