@@ -1,0 +1,44 @@
+@model Examen_Futbol_peruano.Models.Jugador
+@{
+    ViewData["Title"] = "Registrar Jugador";
+    var equipos = ViewBag.Equipos as List<Examen_Futbol_peruano.Models.Equipo>;
+}
+
+<h2>Registrar Jugador</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Edad"></label>
+        <input asp-for="Edad" type="number" class="form-control" />
+        <span asp-validation-for="Edad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Posicion"></label>
+        <input asp-for="Posicion" class="form-control" />
+        <span asp-validation-for="Posicion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Equipo actual</label>
+        <select class="form-control" name="EquipoId" required>
+            <option value="">-- Selecciona un equipo --</option>
+            @foreach (var equipo in equipos)
+            {
+                <option value="@equipo.Id">@equipo.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
