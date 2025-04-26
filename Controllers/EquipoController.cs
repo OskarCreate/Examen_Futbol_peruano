@@ -10,6 +10,7 @@ using Examen_Futbol_peruano.Models;
 
 namespace Examen_Futbol_peruano.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class EquipoController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -5,6 +5,7 @@ using Examen_Futbol_peruano.Data;
 
 namespace Examen_Futbol_peruano.Controllers
 {
+    [Authorize]
     public class JugadorController : Controller
     {
         private readonly ApplicationDbContext _context;
