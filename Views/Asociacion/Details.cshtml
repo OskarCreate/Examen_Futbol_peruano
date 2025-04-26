@@ -1,0 +1,36 @@
+@model Examen_Futbol_peruano.Models.Asociacion
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Asociacion</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaAsignacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaAsignacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Jugador)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Jugador.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Equipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Equipo.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
