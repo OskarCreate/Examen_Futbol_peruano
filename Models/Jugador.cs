@@ -21,6 +21,9 @@ namespace Examen_Futbol_peruano.Models
         public string? Posicion { get; set; }
 
         public ICollection<Asociacion> Asociaciones { get; set; } = new List<Asociacion>();
+
+        [Required]
+        public string? EquipoActual => Asociaciones?.FirstOrDefault()?.Equipo?.Nombre;
     }
 }
 
