@@ -66,8 +66,8 @@ namespace Examen_Futbol_peruano.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime?>("Cumpleaños")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Edad")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
