@@ -15,14 +15,12 @@ namespace Examen_Futbol_peruano.Models
         [Required]
         public string Nombre { get; set; }
 
-        public DateTime? Cumpleaños { get; set; }
+        [Range(15, 50, ErrorMessage = "La edad debe estar entre 15 y 50 años")]
+        public int Edad { get; set; }
 
         public string? Posicion { get; set; }
 
         public ICollection<Asociacion> Asociaciones { get; set; } = new List<Asociacion>();
-
-        [NotMapped]
-        public int? Edad => Cumpleaños.HasValue ? 
-            (int)((DateTime.Now - Cumpleaños.Value).TotalDays / 365.25) : null;
     }
 }
+
