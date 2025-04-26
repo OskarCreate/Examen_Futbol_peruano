@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Examen_Futbol_peruano.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250426041155_NewPosgressMigracion")]
+    [Migration("20250426044021_NewPosgressMigracion")]
     partial class NewPosgressMigracion
     {
         /// <inheritdoc />
