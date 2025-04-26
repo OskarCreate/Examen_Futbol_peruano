@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Examen_Futbol_peruano.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250426021619_NewMigracion")]
+    [Migration("20250426024530_NewMigracion")]
     partial class NewMigracion
     {
         /// <inheritdoc />
