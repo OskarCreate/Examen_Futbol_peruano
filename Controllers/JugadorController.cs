@@ -2,6 +2,7 @@ using Examen_Futbol_peruano.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Examen_Futbol_peruano.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Examen_Futbol_peruano.Controllers
 {
